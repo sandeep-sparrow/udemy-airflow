@@ -9,6 +9,7 @@ from astro.files import File
 from astro.sql.table import Table, Metadata
 from airflow.operators.python import PythonOperator
 from airflow.sensors.base import PokeReturnValue
+from airflow.providers.slack.notifications.slack_notifier import SlackNotifier
 
 default_args = {
     'owner': 'airflow',
@@ -26,6 +27,16 @@ SYMBOL = 'AAPL'
     catchup=False,
     tags=['stock_market', 'udemy', 'prajapat21'],
     max_active_runs=1,
+    on_success_callback=SlackNotifier(
+        slack_conn_id='slack',
+        text='The DAG stock_market has successfully been executed.',
+        channel='general'
+    ),
+    on_failure_callback=SlackNotifier(
+        slack_conn_id='slack',
+        text='The DAG stock_market has failed.',
+        channel='general'
+    )
 )
 def stock_market():
 
