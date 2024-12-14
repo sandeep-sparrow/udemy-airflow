@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/dags/data/input" />
+      <excludeFolder url="file://$MODULE_DIR$/dags/data/output" />
+      <excludeFolder url="file://$MODULE_DIR$/include/data/minio/.minio.sys/buckets/.usage-cache.bin.bkp" />
+      <excludeFolder url="file://$MODULE_DIR$/include/data/minio/.minio.sys/buckets/ecommerce-data/.usage-cache.bin.bkp" />
+      <excludeFolder url="file://$MODULE_DIR$/include/data/minio/.minio.sys/buckets/stock-market/.usage-cache.bin.bkp" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.8 (python382)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

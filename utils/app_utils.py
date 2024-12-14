@@ -68,21 +68,3 @@ def store_vrg_response(vrg_response):
     )
 
     return f'{objw.bucket_name}/repaired.json'
-
-
-sample_output_file_path = '/Users/prajapat21/dev-projects/udemy_airflow/dags/data/output/sample_vrg_response.json'
-
-def read_input_file_task(file_path):
-    with open(file_path, 'r') as json_file:
-        data = json.load(json_file)
-    return data
-
-json_data = read_input_file_task(sample_output_file_path)
-columns = json_data.keys()
-for column in columns:
-    print(column)
-print(",".join(columns))
-
-endpoint = "http://host.docker.internal:9000"
-print(endpoint.split("://")[1])
-print(endpoint.split("://")[0])
